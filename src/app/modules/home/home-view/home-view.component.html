@@ -1,0 +1,72 @@
+<div>
+    <div class="header">
+        <div class="logo sameline">
+            <p>Healthify</p>
+        </div>
+        <div class="dropdown sameline">Dropdown
+
+        </div>
+        <div class="datepicker sameline">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button mat-raised-button (click)="picker.open()">Open</button>
+            Calendar
+        </div>
+        <div class="align-right sameline">
+            <button class="nav-button">Appointments</button>
+            <button class="nav-button" >Walk In</button>
+            <button>Settings</button>
+        </div>
+    </div>
+    <div class="body-line">
+        <h2>Home</h2>
+
+        <div>
+            <div class="tabs">
+                <div class="sameline each-tab">
+                    <p>{{tableTabs.types.queueCount}}</p>
+                    <p>Queue</p>
+                </div>
+                <div class="sameline each-tab">
+                    <p>{{tableTabs.types.earlierCount}}</p>
+                    <p>Earlier</p>
+                </div>
+                <div class="sameline each-tab">
+                    <p>{{tableTabs.types.waitlistCount}}</p>
+                    <p>Wait List</p>
+                </div>
+                <div class="sameline each-tab">
+                    <p>{{tableTabs.types.noShowCount}}</p>
+                    <p>No Show</p>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Patient</th>
+                        <th>Contact</th>
+                        <th>Appointment</th>
+                        <th>Waited</th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of tableTabs.data; index as i;">
+                            <td>{{item.orderID}}</td>
+                            <td>{{item.user.name}}</td>
+                            <td>{{item.contact}}</td>
+                            <td>{{item.appointmentTime | date}}</td>
+                            <td>{{item.time}}</td>
+                            <td>{{item.type}}</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
