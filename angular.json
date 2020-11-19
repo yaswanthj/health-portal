@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< Updated upstream
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+>>>>>>> Stashed changes
               "src/styles.css"
             ],
             "scripts": []
@@ -89,7 +92,10 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< Updated upstream
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+>>>>>>> Stashed changes
               "src/styles.css"
             ],
             "scripts": []
@@ -121,6 +127,7 @@
           }
         }
       }
+<<<<<<< Updated upstream
     }
   },
   "defaultProject": "hospital",
@@ -128,3 +135,8 @@
     "analytics": false
   }
 }
+=======
+    }},
+  "defaultProject": "hospital"
+}
+>>>>>>> Stashed changes
